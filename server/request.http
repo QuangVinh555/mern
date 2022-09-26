@@ -1,0 +1,57 @@
+
+GET http://localhost:5000/api/auth/
+
+###
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "nhanvien1",
+    "password": "12345"
+}
+
+###
+
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json 
+
+{
+    "username": "nhanvien2",
+    "password": "12345"
+}
+
+###
+POST http://localhost:5000/api/post/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ3OGVjOGIxYzIxNTljZTk5ZTY4NmUiLCJpYXQiOjE2NTkwODIyODl9.FXpzADRKYOWAWS2LhqA_Yx-fyiuIQOyG_vKWA8nt5Ok
+
+{
+    "title": "ReactJs2",
+    "description": "Học React",
+    "url": "reactjs.com",
+    "status": "LEARNING"
+}
+
+###
+GET http://localhost:5000/api/post/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ3OGYwOWIxYzIxNTljZTk5ZTY4NzEiLCJpYXQiOjE2NTgzOTA5MDJ9.p_nsKEW34x-311a4veNTv85WU8VQioUzdrYC1gLnW_k
+
+###
+PUT http://localhost:5000/api/post/62d90399c90341a70cde41ac
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ3OGVjOGIxYzIxNTljZTk5ZTY4NmUiLCJpYXQiOjE2NTkwODIyODl9.FXpzADRKYOWAWS2LhqA_Yx-fyiuIQOyG_vKWA8nt5Ok
+
+{
+    "title": "VueJs",
+    "description": "Học Vue",
+    "url": "https://vue.org",
+    "status": "LEARNED"
+}
+
+###
+
+DELETE http://localhost:5000/api/post/62d90399c90341a70cde41ac
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmQ3OGYwOWIxYzIxNTljZTk5ZTY4NzEiLCJpYXQiOjE2NTgzOTA5MDJ9.p_nsKEW34x-311a4veNTv85WU8VQioUzdrYC1gLnW_k
+
